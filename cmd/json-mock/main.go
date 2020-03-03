@@ -140,7 +140,7 @@ func Response(w http.ResponseWriter, r *http.Request) {
 		if r.URL.Path == ep.Path && r.Method == ep.Method {
 			fmt.Println("method:", r.Method)
 			fmt.Println("path:", r.URL.Path)
-			w.Header().Set(HeaderContentType, MIMETextPlainCharsetUTF8)
+			w.Header().Set(HeaderContentType, MIMEApplicationJSONCharsetUTF8)
 			w.WriteHeader(ep.Status)
 			s := Path2Response(ep.JsonPath)
 			b := []byte(s)

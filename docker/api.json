@@ -1,0 +1,17 @@
+{
+  "port": 9000,
+  "endpoints": [
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/",
+      "jsonPath": "./healthz.json"
+    },
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/healthz",
+      "jsonPath": "./healthz.json"
+    }
+  ]
+}
